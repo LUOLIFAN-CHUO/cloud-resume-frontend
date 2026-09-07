@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ja">
     <head>
         <title>Resume - ラ・リキハン</title>
         <meta charset="utf-8" />
@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         
-        <!-- 新增：图片悬停放大与遮罩层的 CSS 样式 -->
+        <!-- 画像拡大用のCSSスタイル -->
         <style>
             .zoom-image-wrapper {
                 position: relative;
@@ -32,7 +32,7 @@
                 font-size: 2em;
                 opacity: 0;
                 transition: opacity 0.3s ease;
-                pointer-events: none; /* 防止遮罩层阻挡点击事件 */
+                pointer-events: none;
             }
             .zoom-image-wrapper:hover img {
                 transform: scale(1.05);
@@ -45,200 +45,192 @@
     <body class="is-preload">
 
         <!-- Page Wrapper -->
-            <div id="page-wrapper">
+        <div id="page-wrapper">
 
-                <!-- Header -->
-                    <header id="header" class="alt">
-                        <h1><a href="index.html">ラ・リキハン</a></h1>
-                        <nav>
-                            <a href="#menu">Menu</a>
-                        </nav>
-                    </header>
+            <!-- Header -->
+            <header id="header" class="alt">
+                <h1><a href="index.html">ラ・リキハン</a></h1>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
 
-                <!-- Menu -->
-                    <nav id="menu">
-                        <div class="inner">
-                            <h2>Menu</h2>
-                            <ul class="links">
-                                <li><a href="index.html">ホーム</a></li>
-                                <li><a href="cover_letter.html">自己PR</a></li>
-                                <li><a href="career_goal.html">キャリア目標</a></li>
+            <!-- Menu -->
+            <nav id="menu">
+                <div class="inner">
+                    <h2>Menu</h2>
+                    <ul class="links">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="cover_letter.html">自己PR</a></li>
+                        <li><a href="career_goal.html">キャリア目標</a></li>
+                    </ul>
+                    <a href="#" class="close">Close</a>
+                </div>
+            </nav>
+
+            <!-- Banner (Hero 区域) -->
+            <section id="banner">
+                <div class="inner">
+                    <div class="logo"><span class="icon solid fa-cloud"></span></div>
+                    <h2>ラ・リキハン</h2>
+                    <p>Cloud Engineer志望| 東京都</p>
+                    <p><a href="mailto:a72228937@gmail.com">a72228937@gmail.com</a></p>
+                    <br />
+                    <div style="font-size: 0.9em; opacity: 0.8;">
+                        訪問者数：<span id="visitorCount" style="font-weight: bold; color: #4fe3c1;">読み込み中...</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wrapper -->
+            <section id="wrapper">
+
+                <!-- One: 資格・認定 -->
+                <section id="one" class="wrapper spotlight style1">
+                    <div class="inner">
+                        <a class="image zoom-image-wrapper" onclick="showImage('images/pic01.jpg')">
+                            <img src="images/pic01.jpg" alt="Certifications" />
+                            <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
+                        </a>
+                        <div class="content">
+                            <h2 class="major">資格・認定</h2>
+                            <ul>
+                                <li>TOEFL iBT 101</li>
+                                <li>基本情報技術者</li>
+                                <li>AWS Certified Cloud Practitioner (2026.11受験予定)</li>
+                                <li>AWS Certified Solutions Architect – Associate (2027.3受験予定)</li>
+                                <li>応用情報技術者 (2026.11受験予定)</li>
                             </ul>
-                            <a href="#" class="close">Close</a>
                         </div>
-                    </nav>
+                    </div>
+                </section>
 
-                <!-- Banner (Hero 区域) -->
-                    <section id="banner">
-                        <div class="inner">
-                            <div class="logo"><span class="icon solid fa-cloud"></span></div>
-                            <h2>ラ・リキハン</h2>
-                            <p>Cloud Engineer | 東京都</p>
-                            <p><a href="mailto:a72228937@gmail.com">a72228937@gmail.com</a></p>
-                            <br />
-                            <div style="font-size: 0.9em; opacity: 0.8;">
-                                訪問者数：<span id="visitorCount" style="font-weight: bold; color: #4fe3c1;">読み込み中...</span>
-                            </div>
+                <!-- Two: インターンシップ -->
+                <section id="two" class="wrapper alt spotlight style2">
+                    <div class="inner">
+                        <a class="image zoom-image-wrapper" onclick="showImage('images/aws-internship.jpg')">
+                            <img src="images/aws-internship.jpg" alt="AWS Japan Internship" />
+                            <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
+                        </a>
+                        <div class="content">
+                            <h2 class="major">インターンシップ</h2>
+                            <h3>AWS Japan インターンシップ</h3>
+                            <p>トランスコスモスの研修プログラムを通じて、AWS Japan本社でのインターンシップに参加。AWSのアーキテクチャ図を確認しながら、チュートリアルに沿ってAWS環境を構築する実習を行いました。</p>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                <!-- Wrapper -->
-                    <section id="wrapper">
+                <!-- Three: Cloud Resume Challenge -->
+                <section id="three" class="wrapper spotlight style3">
+                    <div class="inner">
+                        <a class="image zoom-image-wrapper" onclick="showImage('images/architecture.png')">
+                            <img src="images/architecture.png" alt="AWS Architecture" />
+                            <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
+                        </a>
+                        <div class="content">
+                            <h2 class="major">Cloud Resume Challenge</h2>
+                            <p><strong>使用技術:</strong> AWS (S3, CloudFront, Route 53, API Gateway, Lambda, DynamoDB, SAM), Python (boto3), GitHub Actions, HTML/CSS/JS</p>
+                            <p>S3/CloudFront による静的ホスティングから API Gateway + Lambda + DynamoDB のサーバーレスバックエンド構築、AWS SAM と GitHub Actions を用いた CI/CD 自動化までを一体化して構築。</p>
+                            <a href="https://qiita.com/Rikihann" target="_blank" class="special">Qiitaで解説記事を読む</a>
+                        </div>
+                    </div>
+                </section>
 
-                        <!-- One: 資格・認定 (Certifications) -->
-                            <section id="one" class="wrapper spotlight style1">
-                                <div class="inner">
-                                    <!-- 改造1：添加了 zoom-image-wrapper 和 zoom-overlay -->
-                                    <a class="image zoom-image-wrapper" onclick="showImage('images/pic01.jpg')">
-                                        <img src="images/pic01.jpg" alt="Certifications" />
-                                        <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
-                                    </a>
-                                    <div class="content">
-                                        <h2 class="major">資格・認定</h2>
-                                        <ul>
-                                            <li>TOEFL iBT 101</li>
-                                            <li>基本情報技術者</li>
-                                            <li>AWS Certified Cloud Practitioner(2026.11受験予定)</li>
-                                            <li>AWS Certified Solutions Architect – Associate(2027.3受験予定)</li>
-                                            <li>応用情報技術者(2026.11受験予定)</li>
-                                        </ul>
+                <!-- Four: スキル & 学歴 -->
+                <section id="four" class="wrapper alt style1">
+                    <div class="inner">
+                        <h2 class="major">スキル & 学歴</h2>
+                        <section class="features">
+                            <article>
+                                <h3 class="major">paiza 学習記録</h3>
+                                <p style="margin-bottom: 1em;">PythonとSQLを中心に、アルゴリズム問題を用いて実践的なコーディングスキルを継続的に強化しています。</p>
+                                
+                                <div style="display: flex; gap: 10px; justify-content: space-between; align-items: flex-start;">
+                                    <div style="text-align: center; width: 32%;">
+                                        <div class="zoom-image-wrapper" style="border: 1px solid rgba(255, 255, 255, 0.2);" onclick="showImage('images/python_learning.jpg')">
+                                            <img src="images/python_learning.jpg" alt="Python 学習履歴" />
+                                            <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
+                                        </div>
+                                        <span style="font-size: 0.8em; color: #fff; display: block; margin-top: 5px;">Python</span>
+                                    </div>
+                                    
+                                    <div style="text-align: center; width: 32%;">
+                                        <div class="zoom-image-wrapper" style="border: 1px solid rgba(255, 255, 255, 0.2);" onclick="showImage('images/sql_learning.jpg')">
+                                            <img src="images/sql_learning.jpg" alt="SQL 学習履歴" />
+                                            <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
+                                        </div>
+                                        <span style="font-size: 0.8em; color: #fff; display: block; margin-top: 5px;">SQL</span>
+                                    </div>
+                                    
+                                    <div style="text-align: center; width: 32%;">
+                                        <div class="zoom-image-wrapper" style="border: 1px solid rgba(255, 255, 255, 0.2);" onclick="showImage('images/paiza_level.png')">
+                                            <img src="images/paiza_level.png" alt="総合評価" />
+                                            <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
+                                        </div>
+                                        <span style="font-size: 0.8em; color: #fff; display: block; margin-top: 5px;">学習履歴</span>
                                     </div>
                                 </div>
-                            </section>
-
-                        <!-- Two: インターンシップ (Internship) -->
-                            <section id="two" class="wrapper alt spotlight style2">
-                                <div class="inner">
-                                    <!-- 改造2：实习经历图片 -->
-                                    <a class="image zoom-image-wrapper" onclick="showImage('images/aws-internship.jpg')">
-                                        <img src="images/aws-internship.jpg" alt="AWS Japan Internship" />
-                                        <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
-                                    </a>
-                                    <div class="content">
-                                        <h2 class="major">インターンシップ</h2>
-                                        <h3>AWS Japan インターンシップ</h3>
-                                        <p>トランスコスモスの研修プログラムを通じて、AWS Japan本社でのインターンシップに参加。AWSのアーキテクチャ図を確認しながら、チュートリアルに沿ってAWS環境を構築する実習を行いました。</p>
-                                    </div>
-                                </div>
-                            </section>
-
-                        <!-- Three: Cloud Resume Challenge (核心架构展示区) -->
-                            <section id="three" class="wrapper spotlight style3">
-                                <div class="inner">
-                                    <!-- 改造3：AWS架构图（点击从跳转网页改为了放大图片，原网页链接保留在下方文字按钮处） -->
-                                    <a class="image zoom-image-wrapper" onclick="showImage('images/architecture.png')">
-                                        <img src="images/architecture.png" alt="AWS Architecture" />
-                                        <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
-                                    </a>
-                                    <div class="content">
-                                        <h2 class="major">Cloud Resume Challenge</h2>
-                                        <p><strong>使用技術:</strong> AWS (S3, CloudFront, Route 53, API Gateway, Lambda, DynamoDB, SAM), Python (boto3), GitHub Actions, HTML/CSS/JS</p>
-                                        <p>S3/CloudFront による静的ホスティングから API Gateway + Lambda + DynamoDB のサーバーレスバックエンド構築、AWS SAM と GitHub Actions を用いた CI/CD 自動化までを一体化して構築。</p>
-                                        <a href="https://qiita.com/Rikihann" target="_blank" class="special">Qiitaで解説記事を読む</a>
-                                    </div>
-                                </div>
-                            </section>
-
-                        <!-- Four: スキル & 学歴 -->
-                            <section id="four" class="wrapper alt style1">
-                                <div class="inner">
-                                    <h2 class="major">スキル & 学歴</h2>
-                                    <section class="features">
-                                        <article>
-                                            <h3 class="major">paiza 学習記録</h3>
-                                            <p style="margin-bottom: 1em;">PythonとSQLを中心に、アルゴリズム問題を用いて実践的なコーディングスキルを継続的に強化しています。</p>
-                                            
-                                            <!-- 改造4：Paiza 3张图片并排展示 -->
-                                            <div style="display: flex; gap: 10px; justify-content: space-between; align-items: flex-start;">
-                                                <!-- 第一张图：Python -->
-                                                <div style="text-align: center; width: 32%;">
-                                                    <div class="zoom-image-wrapper" style="border: 1px solid rgba(255, 255, 255, 0.2);" onclick="showImage('images/python_learning.jpg')">
-                                                        <img src="images/python_learning.jpg" alt="Python 学習履歴" />
-                                                        <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
-                                                    </div>
-                                                    <span style="font-size: 0.8em; color: #fff; display: block; margin-top: 5px;">Python</span>
-                                                </div>
-                                                
-                                                <!-- 第二张图：SQL -->
-                                                <div style="text-align: center; width: 32%;">
-                                                    <div class="zoom-image-wrapper" style="border: 1px solid rgba(255, 255, 255, 0.2);" onclick="showImage('images/sql_learning.jpg')">
-                                                        <img src="images/sql_learning.jpg" alt="SQL 学習履歴" />
-                                                        <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
-                                                    </div>
-                                                    <span style="font-size: 0.8em; color: #fff; display: block; margin-top: 5px;">SQL</span>
-                                                </div>
-                                                
-                                                <!-- 第三张图：其他/综合 -->
-                                                <div style="text-align: center; width: 32%;">
-                                                    <div class="zoom-image-wrapper" style="border: 1px solid rgba(255, 255, 255, 0.2);" onclick="showImage('images/paiza_level.png')">
-                                                        <img src="images/paiza_level.png" alt="総合評価" />
-                                                        <div class="zoom-overlay"><span class="icon solid fa-search-plus"></span></div>
-                                                    </div>
-                                                    <span style="font-size: 0.8em; color: #fff; display: block; margin-top: 5px;">学習履歴</span>
-                                                </div>
-                                            </div>
-                                        </article>
+                            </article>
+                            
+                            <article>
+                                <h3 class="major">テクニカルスキル</h3>
+                                <p><strong>Cloud/DevOps:</strong> AWS, Git, GitHub Actions, AWS SAM<br />
+                                <strong>Languages:</strong> Python, Shell, SQL, HTML / CSS, JavaScript<br />
+                                <strong>OS/Other:</strong> Linux</p>
+                            </article>
                                         
-                                        <article>
-                                            <h3 class="major">テクニカルスキル</h3>
-                                            <p><strong>Cloud/DevOps:</strong> AWS, Git, GitHub Actions, AWS SAM<br />
-                                            <strong>Languages:</strong> Python, Shell, SQL, HTML / CSS, JavaScript<br />
-                                            <strong>OS/Other:</strong> Linux</p>
-                                        </article>
-                                                    
-                                        <article>
-                                            <h3 class="major">学歴</h3>
-                                            <p><strong>中央大学</strong><br />
-                                            先進理工学部 電気電子情報通信工学科<br />
-                                            2030年卒業予定</p>
-                                        </article>
-                                    </section>
-                                </div>
-                            </section>
+                            <article>
+                                <h3 class="major">学歴</h3>
+                                <p><strong>中央大学</strong><br />
+                                先進理工学部 電気電子情報通信工学科<br />
+                                2030年卒業予定</p>
+                            </article>
+                        </section>
+                    </div>
+                </section>
 
-                    </section>
+            </section>
 
-                <!-- Footer -->
-                    <section id="footer">
-                        <div class="inner">
-                            <h2 class="major">Get in Touch</h2>
-                            <p>クラウドインフラの構築や自動化に強い関心があります。お気軽にご連絡ください。</p>
-                            <ul class="contact">
-                                <li class="icon solid fa-envelope"><a href="mailto:a72228937@gmail.com">a72228937@gmail.com</a></li>
-                                <li class="icon brands fa-github"><a href="https://github.com/LUOLIFAN-CHUO" target="_blank">GitHub</a></li>
-                                <li class="icon solid fa-file-alt"><a href="https://qiita.com/Rikihann" target="_blank">Qiita</a></li>
-                                <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/lifan-luo-1b3637411/" target="_blank">LinkedIn</a></li>
-                            </ul>
-                            <ul class="copyright">
-                                <li>&copy; 2026 ラ・リキハン. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            </ul>
-                        </div>
-                    </section>
+            <!-- Footer -->
+            <section id="footer">
+                <div class="inner">
+                    <h2 class="major">Get in Touch</h2>
+                    <p>クラウドインフラの構築や自動化に強い関心があります。お気軽にご連絡ください。</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a href="mailto:a72228937@gmail.com">a72228937@gmail.com</a></li>
+                        <li class="icon brands fa-github"><a href="https://github.com/LUOLIFAN-CHUO" target="_blank">GitHub</a></li>
+                        <li class="icon solid fa-file-alt"><a href="https://qiita.com/Rikihann" target="_blank">Qiita</a></li>
+                        <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/lifan-luo-1b3637411/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; 2026 ラ・リキハン. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </div>
+            </section>
 
-            </div>
+        </div>
 
         <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-            <!-- 你的 API 计数器逻辑脚本 -->
-            <script src="script.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="script.js"></script>
 
-            <!-- 全局大图弹窗容器 -->
-            <div id="imageModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); align-items: center; justify-content: center; cursor: zoom-out;" onclick="this.style.display='none'">
-                <img id="modalImg" src="" style="max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" />
-                <span style="position: absolute; top: 20px; right: 40px; color: white; font-size: 40px; font-weight: bold;">&times;</span>
-            </div>
+        <!-- 全局大图弹窗容器 -->
+        <div id="imageModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); align-items: center; justify-content: center; cursor: zoom-out;" onclick="this.style.display='none'">
+            <img id="modalImg" src="" style="max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" />
+            <span style="position: absolute; top: 20px; right: 40px; color: white; font-size: 40px; font-weight: bold;">&times;</span>
+        </div>
 
-            <script>
-            // 点击图片时触发放大
-            function showImage(src) {
-                document.getElementById('modalImg').src = src;
-                document.getElementById('imageModal').style.display = 'flex';
-            }
-            </script>
+        <script>
+        // 点击图片时触发放大
+        function showImage(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+        </script>
     </body>
 </html>

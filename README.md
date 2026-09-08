@@ -1,5 +1,7 @@
 # Cloud Resume Challenge - Frontend
  
+demo:
+https://dyp8879eswsdu.cloudfront.net/
 
 ## Overview
 my resume deploy on AWS

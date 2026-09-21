@@ -366,7 +366,14 @@
             const isAvailability = sources.some((source) =>
                 source && (source.section?.trim() === "availability" || source.title?.trim() === "勤務可能時間")
             );
-            if (!isAvailability || !text.includes("曜日")) return text;
+            if (!isAvailability || !text.includes("曜日")) {
+                const lines = text
+                    .split("。")
+                    .map((line) => line.trim())
+                    .filter(Boolean);
+                if (lines.length < 3) return text;
+                return lines.map((line) => `・${line}。`).join("\n");
+            }
 
             const lines = text
                 .split("。")

@@ -257,6 +257,7 @@
                 </div>
                 <div class="suggestions">
                     <p>おすすめの質問</p>
+                    <button type="button" data-question="いつから勤務を開始できますか。">いつから勤務を開始できますか？</button>
                     <button type="button" data-question="AWS に関する経験を教えてください。">AWS に関する経験は？</button>
                     <button type="button" data-question="Cloud Resume Challenge について教えてください。">Cloud Resume Challenge とは？</button>
                     <button type="button" data-question="どのような技術スキルがありますか？">技術スキルについて</button>

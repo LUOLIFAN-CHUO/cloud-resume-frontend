@@ -146,6 +146,7 @@
                 border: 1px solid #e1e5e8;
                 border-radius: 0.25rem 0.75rem 0.75rem 0.75rem;
                 font-size: 0.78rem;
+                line-height: 1.7;
                 white-space: pre-line;
             }
 
@@ -361,6 +362,20 @@
             return message;
         }
 
+        formatAnswer(text, sources) {
+            const isAvailability = sources.some((source) =>
+                source && (source.section?.trim() === "availability" || source.title?.trim() === "勤務可能時間")
+            );
+            if (!isAvailability || !text.includes("曜日")) return text;
+
+            const lines = text
+                .split("。")
+                .map((line) => line.trim())
+                .filter(Boolean)
+                .map((line) => `・${line}。`);
+            return ["勤務可能時間", ...lines].join("\n");
+        }
+
         addSources(sources) {
             if (sources.length === 0) return;
             const wrapper = document.createElement("div");
@@ -415,7 +430,7 @@
             try {
                 const result = await this.requestAnswer(question);
                 loading.remove();
-                this.addMessage(result.answer, "assistant");
+                this.addMessage(this.formatAnswer(result.answer, result.sources), "assistant");
                 this.addSources(result.sources);
                 if (question === "曜日ごとの勤務可能時間を教えてください。") {
                     this.addFollowUpSuggestion(

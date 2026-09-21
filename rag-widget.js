@@ -257,7 +257,7 @@
                 </div>
                 <div class="suggestions">
                     <p>おすすめの質問</p>
-                    <button type="button" data-question="いつから勤務を開始できますか。">いつから勤務を開始できますか？</button>
+                    <button type="button" data-question="曜日ごとの勤務可能時間を教えてください。">勤務可能な曜日・時間は？</button>
                     <button type="button" data-question="AWS に関する経験を教えてください。">AWS に関する経験は？</button>
                     <button type="button" data-question="Cloud Resume Challenge について教えてください。">Cloud Resume Challenge とは？</button>
                     <button type="button" data-question="どのような技術スキルがありますか？">技術スキルについて</button>
@@ -381,6 +381,20 @@
             this.messages.append(wrapper);
         }
 
+        addFollowUpSuggestion(question, label) {
+            const wrapper = document.createElement("div");
+            wrapper.className = "suggestions follow-up";
+            const prompt = document.createElement("p");
+            prompt.textContent = "関連する質問";
+            const button = document.createElement("button");
+            button.type = "button";
+            button.dataset.question = question;
+            button.textContent = label;
+            button.addEventListener("click", () => this.ask(question));
+            wrapper.append(prompt, button);
+            this.messages.append(wrapper);
+        }
+
         scrollToLatest() {
             this.messages.scrollTo({ top: this.messages.scrollHeight, behavior: "smooth" });
         }
@@ -403,6 +417,12 @@
                 loading.remove();
                 this.addMessage(result.answer, "assistant");
                 this.addSources(result.sources);
+                if (question === "曜日ごとの勤務可能時間を教えてください。") {
+                    this.addFollowUpSuggestion(
+                        "いつから勤務を開始できますか。",
+                        "いつから勤務を開始できますか？",
+                    );
+                }
             } catch (error) {
                 loading.remove();
                 this.addMessage(error.message || ERROR_MESSAGES.unavailable, "assistant", { error: true });

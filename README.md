@@ -1,7 +1,8 @@
 # Cloud Resume Challenge - Frontend
+
+> Legacy HTML/CSS/JavaScript version of Cloud Portfolio, retained as an AWS implementation example. The current React resume is maintained in typescript-practice. The AWS deployment workflow is retained as a disabled reference file.
  
-demo:
-https://dyp8879eswsdu.cloudfront.net/
+[Current resume](https://luolifan-chuo.github.io/typescript-practice/) · [Main repository](https://github.com/LUOLIFAN-CHUO/typescript-practice)
 
 ## Overview
 my resume deploy on AWS
